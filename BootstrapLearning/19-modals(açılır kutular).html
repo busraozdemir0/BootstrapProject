@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Modals(Açılır Kutular)</title>
+</head>
+<body class="container my-4">
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        <!--data-target içerisine yazdığımız id sayesinde classı modal olan dive ulaşıyoruz-->
+        Open modal
+    </button>
+
+    <div class="modal fade" id="myModal">
+        <!--fade yazdığımızda efektli bir şekilde gelir-->
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <!--modal-lg => büyük açılır kutusu gelmesini sağlar-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal 1</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button> <!--modal'ın yani diyalog kutusunun kapatılması için çarpı butonu-->
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br /> <br />
+
+    <!--buton olmadan javascript ile modalımızı çalıştıracağız-->
+
+    <div class="modal fade" id="myModal2">
+        <!--fade yazdığımızda efektli bir şekilde gelir-->
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <!--modal-lg => büyük açılır kutusu gelmesini sağlar-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal 2</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button> <!--modal'ın yani diyalog kutusunun kapatılması için çarpı butonu-->
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br /> <br />
+
+    <!-- butona javascript koduyla erişerek modal 3'ü çalıştıracağız -->
+
+    <button type="button" class="btn btn-primary" id="btnModal">
+        <!--data-target içerisine yazdığımız id sayesinde classı modal olan dive ulaşıyoruz-->
+        Open modal
+    </button>
+
+    <div class="modal fade" id="myModal3">
+        <!--fade yazdığımızda efektli bir şekilde gelir-->
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <!--modal-lg => büyük açılır kutusu gelmesini sağlar-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal 3</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button> <!--modal'ın yani diyalog kutusunun kapatılması için çarpı butonu-->
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $('#myModal2').modal('show'); // sayfayı yüklediğimiz anda direkt modal gösterilir
+
+            $('#btnModal').click(function () {
+
+                $('#myModal3').modal('show');
+                console.log('click');
+
+            });
+
+            $('#myModal3').on('hide.bs.modal', function (e) {
+                console.log('hide');   // modal3 çalıştıktan sonra hide metodu çalışır ve console ekranına hide yazar
+            });
+
+            $('#myModal3').on('hidden.bs.modal', function (e) {
+                console.log('hidden');   // modal3 çalıştırılıp tamamen kapatıldığında hidden metodu çalışır ve console ekranına hidden yazar
+            });
+            $('#myModal3').on('show.bs.modal', function (e) {
+                console.log('show');   // modal3 gösterilmeden önce show metodu çalışır ve console ekranına show yazar
+            });
+            $('#myModal3').on('shown.bs.modal', function (e) {
+                console.log('shown');   // modal3 gösterildikten sonra shown metodu çalışır ve console ekranına shown yazar
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+</html>

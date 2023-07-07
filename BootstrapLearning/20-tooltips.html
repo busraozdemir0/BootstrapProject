@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Tooltip</title>
+</head>
+<body class="container my-4">
+
+    <a href="#" class="btn btn-primary" data-toggle="tooltip" title="Tooltip Text">
+        Hover over me
+    </a>
+
+    <br /><br />
+
+    <!--çıkan text html olarak yorumlanıyor-->
+    <button id="btnTooltip" type="button" class="btn btn-success" data-toggle="tooltip" title="<h3>Header</h3><br /><p>Tooltip Text</p>" data-html="true">
+        Tooltip with Html
+    </button>
+
+    <br /><br />
+
+    <p>
+        <!--üst tarafa açılacak-->
+        <a href="#" class="btn btn-primary" data-toggle="tooltip" title="Tooltip Text" data-placement="top">
+            Tooltip on top
+        </a>
+        <!--sağ tarafa açılacak-->
+        <a href="#" class="btn btn-primary" data-toggle="tooltip" title="Tooltip Text" data-placement="right">
+            Tooltip on right
+        </a>
+        <!--alt tarafa açılacak-->
+        <a href="#" class="btn btn-primary" data-toggle="tooltip" title="Tooltip Text" data-placement="bottom">
+            Tooltip on bottom
+        </a>
+        <!--sol tarafa açılacak-->
+        <a href="#" class="btn btn-primary" data-toggle="tooltip" title="Tooltip Text" data-placement="left">
+            Tooltip on left
+        </a>
+    </p>
+
+    <br /><br />
+
+    <p>
+        <!--butonlara verdiğimiz fonksiyonlar sayesinde tooltiple gösterilip kapatılabilecek-->
+        <button type="button" class="btn btn-warning" onclick="showTooltip()">Show Tooltip</button>
+        <button type="button" class="btn btn-warning" onclick="hideTooltip()">Hide Tooltip</button>
+        <button type="button" class="btn btn-warning" onclick="toggleTooltip()">Toggle Tooltip</button>
+
+    </p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip(); // tooltip jquery aracılığıyla aktif edilebilir
+
+        });
+
+        function showTooltip() {
+            $('#btnTooltip').tooltip('show');
+        }
+
+        function hideTooltip() {
+            $('#btnTooltip').tooltip('hide');
+        }
+
+        function toggleTooltip() {
+            $('#btnTooltip').tooltip('toggle'); // gösteriliyorsa kapatacak, kapalıysa gösterecek
+        }
+
+
+
+        $('#btnTooltip').on('show.bs.tooltip', function () {
+            console.log('show...')
+        });
+
+        $('#btnTooltip').on('shown.bs.tooltip', function () {
+            console.log('shown...')
+        });
+
+        $('#btnTooltip').on('hide.bs.tooltip', function () {
+            console.log('hide...')
+        });
+
+        $('#btnTooltip').on('hidden.bs.tooltip', function () {
+            console.log('hidden...')
+        });
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Text Hizalama ve Display</title>
+    <style>
+        .d-inline-block{
+            display:inline-block;
+        }
+
+    </style>
+</head>
+<body class="p-5">
+
+    <p class="text-justify">
+        <!--justify ile yazımız iki taraftan hizalanır-->
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <p class="text-left">
+        <!--yazımız sola hizalanır-->
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p class="text-center">
+        <!--yazımız sola hizalanır-->
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <br />
+    <blockquote class="blockquote">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+
+        <footer class="blockquote-footer">Büşra</footer>
+    </blockquote>
+
+    <span class="d-block bg-danger mb-2"> d-block</span> <!--satırı olduğu gibi kaplayan bir eleman haline gelir-->
+    <span class="d-block bg-danger"> d-block</span>
+
+    <br /><br />
+
+    <div class="d-inline-block bg-warning">d-inline</div> <!--d-inline ile divler yan yana gelir-->
+    <div class="d-inline-block bg-warning">d-inline</div>
+
+    <br /><br />
+
+    <div class="d-inline-block bg-primary">
+        <!--d-inline-block => ile içerik kadar yer kaplar ve divler yan yana gelir-->
+        <h3>Product Name</h3>
+        Description
+    </div>
+    <div class="d-inline-block bg-primary">
+        <h3>Product Name</h3>
+        Description
+    </div>
+
+    <br /><br />
+
+    <div class="d-none bg-warning">d-none</div> <!--d-none ile ekrandan kaybolur ve ekranda yer kaplamaz-->
+
+    <div class="invisible bg-warning">invisible</div> <!--invisible ile ekrandan kaybolur fakat yine de yer kaplar-->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

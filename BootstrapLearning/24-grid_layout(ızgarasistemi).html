@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Grid layout (Izgara Sistemi)</title>
+</head>
+<body>
+
+    <div class="container my-4">
+
+        <h2 class="my-5">Eşit Kolonlar</h2>
+
+        <div class="row">
+            <div class="col border">Column</div> <!--satırı olduğu gibi kaplar-->
+        </div>
+
+        <div class="row my-2">
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col border">Column</div> <!--toplam 12 kolon vardır. 3 satır eklediğimiz için 12'yi 3'e böler-->
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+            <div class="col border">Column</div>
+        </div>
+
+        <h2 class="my-5">Eşit Olmayan Kolonlar</h2>
+
+        <div class="row">
+            <div class="col-2 border">2 Column</div> <!--bu satır 2 kolonluk yer kaplayacak-->
+            <div class="col-10 border">10 Column</div> <!--Toplamı 12 olması erektiği için bu satır 10 kolonluk yer kaplayacak-->
+        </div>
+
+        <div class="row">
+            <div class="col-8 border">8 Column</div> <!--bu satır 8 kolonluk yer kaplayacak-->
+            <div class="col-4 border">4 Column</div> <!--Toplamı 12 olması erektiği için bu satır 4 kolonluk yer kaplayacak-->
+        </div>
+
+        <div class="row">
+            <div class="col-8 border">8 Column</div>
+            <div class="col-6 border">6 Column</div> <!--12yi aştığı için kalanlar aşağı satıra geçecek-->
+        </div>
+
+        <div class="row">
+            <div class="col-4 border">4 Column</div>
+            <div class="col-5 border">5 Column</div> <!--12 kolonun hepsini kullanmak zorunda değiliz-->
+        </div>
+
+        <div class="row">
+            <div class="col-4 border mr-auto">4 Column</div> <!--mr-auto ile sondaki boşluk ortada olmuş olur-->
+            <div class="col-5 border">5 Column</div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 border ">4 Column</div>
+            <div class="col-5 border ml-auto">5 Column</div> <!--sondaki boşluk ml-auto ile yine ortada olacaktır-->
+        </div>
+
+        <h2 class="my-5">Kolon Sıralama</h2>
+
+        <div class="row">
+            <div class="col-3 border order-3">3 Column</div> <!--order-3 dediğimiz için 3. kolon en başta olacaktır-->
+            <div class="col-4 border order-2">4 Column</div>
+            <div class="col border order-1">Column</div>
+        </div>
+
+        <h2 class="my-5">İç İçe Satırlar</h2>
+
+        <div class="row">
+            <div class="col-4 border">4 Column</div>
+            <div class="col-8 border">
+                8 Column
+                <div class="col bg-primary">6 Column</div>
+                <div class="col bg-danger">6 Column</div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

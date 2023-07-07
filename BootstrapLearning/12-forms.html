@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Forms</title>
+</head>
+<body class="w-75 mx-auto my-4">
+
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter name" /> <!--responsive input olur-->
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter mail" />
+            <small class="form-text text-muted">
+                <!--küçük soluk renkte uyarı mesajı-->
+                please enter a correct email
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Password name" />
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <select name="city" id="city" class="form-control">
+                <option value="0">Kocaeli</option>
+                <option value="1">Düzce</option>
+                <option value="2">Ankara</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea type="text" id="message" cols="30" rows="10" class="form-control" placeholder="Your message..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <legend>Hobies</legend>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" /> Fotoğraf Çekmek
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" /> Kitap Okumak
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" /> Seyahat Etmek
+                </label>
+            </div>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+            <!--checkbox-->
+            <input type="checkbox" class="custom-control-input" id="ch" />
+            <label for="ch" class="custom-control-label">Check</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <!--radiobutton-->
+            <input type="radio" class="custom-control-input" id="rd" />
+            <label for="rd" class="custom-control-label">Radio</label>
+        </div>
+
+        <div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <!--radiobutton-->
+                <input type="radio" class="custom-control-input" id="cr1" name="example" />
+                <label for="cr1" class="custom-control-label">Custom Radio 1</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <!--radiobutton-->
+                <input type="radio" class="custom-control-input custom-control-inline" name="example" id="cr2" />
+                <label for="cr2" class="custom-control-label">Custom Radio 2</label>
+            </div>
+        </div>
+
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" />
+            <div class="input-group-append">
+                <span class="input-group-text" id="ig">@gmail.com</span>
+            </div>
+        </div>
+
+        <div class="input-group mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="ig">https://trendyol.com/</span>
+            </div>
+            <input type="text" class="form-control" />
+        </div>
+
+        <div class="clearfix mt-4">
+            <div class="w-50 float-left">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter name" /> <!--responsive input olur-->
+                </div>
+            </div>
+
+            <div class="w-50 float-left pl-2">
+                <div class="form-group">
+                    <label for="name">Surname</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter name" /> <!--responsive input olur-->
+                </div>
+            </div>
+        </div>
+        <div class="clearfix mt-4">
+            <div class="w-50 float-left">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter name" /> <!--responsive input olur-->
+                </div>
+            </div>
+
+            <div class="w-50 float-left pl-2">
+                <div class="form-group">
+                    <label for="name">Surname</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter name" /> <!--responsive input olur-->
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
